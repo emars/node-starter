@@ -1,48 +1,23 @@
-# Node Starter Repo
+# Commander App
 
 ## About
 
-This project holds a starter repo for Node.js
+The Commander app is both a Job queue and a task runner
 
-It includes:
-- Mocha + Chai.js for testing
-- ES6 Support from Babel
-- Proper Directory Structrue
+Build on top of Kue
 
-## Usage
+## Install
 
-### Install
+./install.sh
 
-```
-$ git clone https://github.com/n34t/node-starter [your-project]
+Should now be running on port 80
 
-$ npm install
-```
+### PORTS
 
-### Linting
+8080: React App
+8081: Socket.io Bot
+8082: Queue UI + JSON API
 
-`$ npm run lint`
+## License 
 
-Uses eslint to check against standard js styles
-
-### Testing
-
-`$ npm run test`
-
-Uses mocha + chai (with expect) to run tests
-
-### Building
-
-`$ npm run build`
-
-Uses Babel to transpile code into dist
-
-
-## TODO
-
-- Require babel-polyfill as a peer dependency and document that the consuming app must require it
-
-
-## License
-
-
+MIT

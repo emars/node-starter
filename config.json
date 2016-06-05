@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    "./server/plugins/nightmare"
+  ],
+  "task_runners":  [
+    "./taskrunners/log.js",
+    "./taskrunners/hello.js",
+    "./taskrunners/wait.js"
+  ],
+  "web_port": 8080,
+  "websocket_port": 8081,
+  "kue_port": 8082,
+  "redis_port": -1
+}

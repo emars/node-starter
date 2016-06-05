@@ -4,11 +4,16 @@
   "description": "This project includes",
   "main": "src/index.js",
   "scripts": {
+    "enclave-serve": "enclave",
+    "enclave-build": "node node_modules/enclave/src/build.js",
+    "enclave-eject": "node node_modules/enclave/src/eject/index.js",
     "test": "npm run compile && mocha --compilers js:babel-core/register",
     "lint": "eslint index.js",
     "doc": "jsdoc index.js",
     "compile": "babel --presets es2015 -d lib/ src/",
-    "prepublish": "npm run compile"
+    "prepublish": "npm run compile",
+    "server": "nodemon --exec npm run babel-node -- ./server",
+    "babel-node": "babel-node --presets=es2015"
   },
   "keywords": [],
   "author": "",
@@ -24,5 +29,16 @@
     "gulp": "^3.9.1",
     "jsdoc": "^3.4.0",
     "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "enclave": "^0.10.7",
+    "kue": "^0.10.5",
+    "react": "^15.0.2",
+    "react-bootstrap": "^0.29.3",
+    "react-dom": "^15.0.2",
+    "socket.io": "^1.4.5",
+    "socket.io-client": "^1.4.5",
+    "winston": "^2.2.0"
   }
 }
